@@ -15,6 +15,7 @@ import { SeguridadComponent } from './components/seguridad/seguridad.component';
 import { APP_ROPUTING } from './app.routes';
 import { MovimientoComponent } from './components/rutas/movimiento/movimiento.component';
 import { Movimiento2Component } from './components/rutas/movimiento-2/movimiento-2.component';
+import { BuscadorComponent } from './components/rutas/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Movimiento2Component } from './components/rutas/movimiento-2/movimiento
     FormularioComponent,
     SeguridadComponent,
     MovimientoComponent,
-    Movimiento2Component
+    Movimiento2Component,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

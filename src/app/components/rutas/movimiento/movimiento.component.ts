@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovimientoComponent implements OnInit {
 
-  constructor() { }
+  parametroRuta: any = {};
+
+  constructor(private activatedRoute: ActivatedRoute ) {
+    this.activatedRoute.params.subscribe(params =>  {
+      console.log(params);
+      this.parametroRuta = params.idFormulario;
+      if(this.parametroRuta === '1') {
+        return this.parametroRuta = null;
+      }
+    });
+  }
 
   ngOnInit() {
   }

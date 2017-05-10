@@ -13,6 +13,7 @@ import { SeguridadComponent } from './components/seguridad/seguridad.component';
 
 // rutas
 import { APP_ROPUTING } from './app.routes';
+import { MovimientoComponent } from './components/rutas/movimiento/movimiento.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { APP_ROPUTING } from './app.routes';
     NavbarComponent,
     HomeComponent,
     FormularioComponent,
-    SeguridadComponent
+    SeguridadComponent,
+    MovimientoComponent
   ],
   imports: [
     BrowserModule,

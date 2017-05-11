@@ -1,5 +1,4 @@
-import { FrmEditarComponent } from './components/formularios/frm-editar/frm-editar.component';
-import { FrmNuevoComponent } from './components/formularios/frm-nuevo/frm-nuevo.component';
+
 // modulos
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,6 +18,8 @@ import { MovimientoComponent } from './components/rutas/movimiento/movimiento.co
 import { Movimiento2Component } from './components/rutas/movimiento-2/movimiento-2.component';
 import { BuscadorComponent } from './components/rutas/buscador/buscador.component';
 
+import { FrmEditarComponent } from './components/formulario/frm-editar/frm-editar.component';
+import { FrmNuevoComponent } from './components/formulario/frm-nuevo/frm-nuevo.component';
 
 
 @NgModule({
@@ -33,7 +34,6 @@ import { BuscadorComponent } from './components/rutas/buscador/buscador.componen
     BuscadorComponent,
     FrmNuevoComponent,
     FrmEditarComponent
-    
   ],
   imports: [
     BrowserModule,

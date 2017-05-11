@@ -1,3 +1,5 @@
+import { FrmEditarComponent } from './components/formularios/frm-editar/frm-editar.component';
+import { FrmNuevoComponent } from './components/formularios/frm-nuevo/frm-nuevo.component';
 // modulos
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,6 +19,8 @@ import { MovimientoComponent } from './components/rutas/movimiento/movimiento.co
 import { Movimiento2Component } from './components/rutas/movimiento-2/movimiento-2.component';
 import { BuscadorComponent } from './components/rutas/buscador/buscador.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,10 @@ import { BuscadorComponent } from './components/rutas/buscador/buscador.componen
     SeguridadComponent,
     MovimientoComponent,
     Movimiento2Component,
-    BuscadorComponent
+    BuscadorComponent,
+    FrmNuevoComponent,
+    FrmEditarComponent
+    
   ],
   imports: [
     BrowserModule,

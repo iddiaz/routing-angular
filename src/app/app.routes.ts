@@ -1,3 +1,5 @@
+import { FrmEditarComponent } from './components/formularios/frm-editar/frm-editar.component';
+import { FrmNuevoComponent } from './components/formularios/frm-nuevo/frm-nuevo.component';
 import { RouterModule, Routes } from '@angular/router';
 
 //componentes
@@ -7,14 +9,24 @@ import { SeguridadComponent } from './components/seguridad/seguridad.component';
 import { MovimientoComponent } from './components/rutas/movimiento/movimiento.component';
 import { BuscadorComponent } from './components/rutas/buscador/buscador.component';
 
+
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'formularios', component: FormularioComponent },
   // ruta por parametro
-  { path: 'formularios/:idFormulario', component: MovimientoComponent },
+  { 
+    path: 'formularios/:idFormulario',
+    component: MovimientoComponent,
+    children: [
+      { path: 'nuevo', component: FrmNuevoComponent },
+      { path: 'editar', component: FrmEditarComponent },
+      { path: '**', pathMatch: 'full', redirectTo: 'editar' }
+    ]
+  },
   { path: 'buscador/:termino', component: BuscadorComponent },
   { path: 'seguridad', component: SeguridadComponent },
-  { path: '**', pathMatch:'full', redirectTo: '' }
+  { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
 export const APP_ROPUTING = RouterModule.forRoot(routes);

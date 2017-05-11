@@ -9,6 +9,7 @@ import { SeguridadComponent } from './components/seguridad/seguridad.component';
 import { MovimientoComponent } from './components/rutas/movimiento/movimiento.component';
 import { BuscadorComponent } from './components/rutas/buscador/buscador.component';
 
+import { MOVIMIENTOS_ROUTES } from './components/rutas/movimiento/movimiento.routes';
 
 
 const routes: Routes = [
@@ -18,11 +19,7 @@ const routes: Routes = [
   { 
     path: 'formularios/:idFormulario',
     component: MovimientoComponent,
-    children: [
-      { path: 'nuevo', component: FrmNuevoComponent },
-      { path: 'editar', component: FrmEditarComponent },
-      { path: '**', pathMatch: 'full', redirectTo: 'editar' }
-    ]
+    children: MOVIMIENTOS_ROUTES
   },
   { path: 'buscador/:termino', component: BuscadorComponent },
   { path: 'seguridad', component: SeguridadComponent },

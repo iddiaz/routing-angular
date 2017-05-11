@@ -12,7 +12,7 @@
       <li class="nav-item active" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['formularios']" >formularios</a>
       </li>
-      <li class="nav-item active" routerLinkActive="active">
+      <li class="nav-item active" routerLinkActive="active" *ngIf="authGuardService.isAutenticated">
         <a class="nav-link" [routerLink]="['seguridad']" >seguridad</a>
       </li>
     </ul>

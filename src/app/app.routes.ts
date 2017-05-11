@@ -11,6 +11,9 @@ import { BuscadorComponent } from './components/rutas/buscador/buscador.componen
 
 import { MOVIMIENTOS_ROUTES } from './components/rutas/movimiento/movimiento.routes';
 
+// Importamos el servicio que controla la seguridad en las rutas o ruta
+import { AuthGuardService } from './services/auth-guard.service';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,7 +25,7 @@ const routes: Routes = [
     children: MOVIMIENTOS_ROUTES
   },
   { path: 'buscador/:termino', component: BuscadorComponent },
-  { path: 'seguridad', component: SeguridadComponent },
+  { path: 'seguridad', component: SeguridadComponent, canActivate: [AuthGuardService] },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 

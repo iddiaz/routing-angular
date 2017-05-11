@@ -21,6 +21,7 @@ import { BuscadorComponent } from './components/rutas/buscador/buscador.componen
 import { FrmEditarComponent } from './components/formulario/frm-editar/frm-editar.component';
 import { FrmNuevoComponent } from './components/formulario/frm-nuevo/frm-nuevo.component';
 
+import { AuthGuardService } from './services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import { FrmNuevoComponent } from './components/formulario/frm-nuevo/frm-nuevo.c
     HttpModule,
     APP_ROPUTING
   ],
-  providers: [],
+  providers: [
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

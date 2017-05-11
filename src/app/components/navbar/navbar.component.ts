@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 // Importamos el router para poder navegar al hacer click en el formulario de busqueda
 import { Router } from '@angular/router';
+import { AuthGuardService } from './../../services/auth-guard.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
 
-  constructor( private router: Router) {
+  constructor( private router: Router, private authGuardService: AuthGuardService) {
 
    }
 

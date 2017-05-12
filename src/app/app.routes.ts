@@ -25,6 +25,7 @@ const routes: Routes = [
     children: MOVIMIENTOS_ROUTES
   },
   { path: 'buscador/:termino', component: BuscadorComponent },
+  { path: 'lazy', loadChildren: './lazy-loading/lazy-loading.module' },
   { path: 'seguridad', component: SeguridadComponent, canActivate: [AuthGuardService] },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];

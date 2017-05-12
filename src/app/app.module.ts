@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { LazyLoadingModule } from './lazy-loading/lazy-loading.module';
 
 // componentes
 import { AppComponent } from './app.component';
@@ -40,7 +41,8 @@ import { AuthGuardService } from './services/auth-guard.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    APP_ROPUTING
+    APP_ROPUTING,
+    LazyLoadingModule
   ],
   providers: [
     AuthGuardService
